@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - MedNest</title>
+    <style>
+        /* Background & Header */
+        .header {
+            width: 100%;
+            background: linear-gradient(to bottom, #d8eff3 30%, #1b7ca5 70%);
+            background-size: cover;
+            background-position: center;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #1b7ca5 35%, #0f3f74 100%);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #10194e;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 90px;
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #cba7da;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        .nav-links ul li a {
+            font-size: 13px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        /* Main Content */
+        .main-content h1 {
+            font-size: 32px;
+            color: #022b50;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .main-content h1::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: #ff006e;
+            left: 50%;
+            bottom: 0;
+            transition: all 0.7s ease-in-out;
+            transform: translateX(-50%);
+        }
+
+        .main-content h1:hover::after {
+            width: 100%;
+        }
+
+        /* ECG GIF Section */
+        .ecg-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .ecg-gif {
+            width: 650px;
+            height: auto;
+            transform: scale(1.2);
+            background: none;
+            mix-blend-mode: screen;
+        }
+
+        /* Chart Section */
+        .charts-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .chart-box {
+            width: 80%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .chart-box:hover {
+            transform: scale(1.05);
+        }
+
+        .chart-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="MedNest Logo" /></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="monitoring.html">MONITORING</a></li>
+                    <li><a href="statistics.html">STATISTICS</a></li>
+                    <li><a href="appointments.html">APPOINTMENTS</a></li>
+                    <li><a href="chatbot.html">CHATBOT</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Heading & Description -->
+        <div class="main-content">
+            <h1>Health Statistics Overview</h1>
+            <p>Track your vitals and monitor key health parameters with real-time statistics and visual charts. <br> Scroll down to find the insights</p>
+        </div>
+
+        <!-- ECG GIF Section -->
+        <div class="ecg-section">
+            <img src="images/Ecg-pulse.gif" alt="ECG Pulse Animation" class="ecg-gif">
+        </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="charts-section">
+      <h2 style="color: #000000;">Your Health Trends</h2>
+
+
+        <div class="chart-container">
+            <!-- Line Chart: Time vs. BP, Temperature, Respiration Rate -->
+            <div class="chart-box">
+                <div class="chart-title">📈 Time vs BP, Temperature, Respiration Rate</div>
+                <iframe width="600" height="371" seamless frameborder="0" scrolling="no" 
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYq2NuazJ42NefAlyKd7yl-TddImz-6OgGAOFFUgSLY-S_4gufoU0RDt-rL4f93yvcy490ZY-aYQUP/pubchart?oid=2095743337&amp;format=interactive">
+                </iframe>
+            </div>
+
+            <!-- Line Chart: Time vs ECG -->
+            <div class="chart-box">
+                <div class="chart-title">📉 Time vs ECG</div>
+                <iframe width="600" height="371" seamless frameborder="0" scrolling="no" 
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYq2NuazJ42NefAlyKd7yl-TddImz-6OgGAOFFUgSLY-S_4gufoU0RDt-rL4f93yvcy490ZY-aYQUP/pubchart?oid=1758133793&amp;format=interactive">
+                </iframe>
+            </div>
+
+            <!-- Bar Chart: Fall Detection -->
+            <div class="chart-box">
+                <div class="chart-title">📊 Fall Detection Analysis</div>
+                <iframe width="600" height="371" seamless frameborder="0" scrolling="no" 
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYq2NuazJ42NefAlyKd7yl-TddImz-6OgGAOFFUgSLY-S_4gufoU0RDt-rL4f93yvcy490ZY-aYQUP/pubchart?oid=2065227963&amp;format=interactive">
+                </iframe>
+            </div>
+
+            <!-- Pie Chart: Respiration Rate -->
+            <div class="chart-box">
+                <div class="chart-title">🟠 Respiration Rate Distribution</div>
+                <iframe width="600" height="371" seamless frameborder="0" scrolling="no" 
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYq2NuazJ42NefAlyKd7yl-TddImz-6OgGAOFFUgSLY-S_4gufoU0RDt-rL4f93yvcy490ZY-aYQUP/pubchart?oid=819969923&amp;format=interactive">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

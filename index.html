@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaFarm - Smart Hydroponics</title>
+    <link rel="icon" type="image" href="images/th.jpeg" />
+    <!-- style.css linking here -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font family linking here -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome.min.css linking here -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Floating Chatbot Button -->
+<div id="chatbot-button" onclick="toggleChatbot()">💬 Quick checkup </div>
+
+<!-- Chatbot Iframe (Initially Hidden) -->
+<iframe id="chatbot-iframe" src="https://www.chatbase.co/chatbot-iframe/MrF8dPDYLFAnX5BazQ0n3"></iframe>
+
+<!-- Chatbot Styles -->
+<style>
+    /* Floating Chatbot Button */
+    #chatbot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #F4E1C6  ;
+        color: black;
+        padding: 12px 18px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s ease;
+        z-index: 99999; /* High z-index to stay above everything */
+    }
+
+    #chatbot-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Floating Chatbot Iframe */
+    #chatbot-iframe {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 350px;
+        height: 500px;
+        border: none;
+        display: none; /* Initially hidden */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        z-index: 99999; /* Ensure chatbot is above all layers */
+        background: white;
+    }
+</style>
+
+<!-- Chatbot Toggle Script -->
+<script>
+    function toggleChatbot() {
+        var chatbot = document.getElementById("chatbot-iframe");
+        if (chatbot.style.display === "none" || chatbot.style.display === "") {
+            chatbot.style.display = "block";
+        } else {
+            chatbot.style.display = "none";
+        }
+    }
+
+
+</script>
+
+    <!-- header section strt -->
+    <section class="header">
+      <!-- nav strt -->
+      <nav>
+        <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Monitoring.html">MONITORING</a></li>
+                <li><a href="Statistics.html">STATISTICS</a></li>
+                <li><a href="Appointments.html">APPOINTMENTS</a></li>
+                <li><a href="Chatbot.html">CHATBOT</a></li>
+                <li><a href="Profile.html">PROFILE</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    </nav>
+      <!-- nav end -->
+      
+      <div class="text-box">
+        <h1 class="logo">
+          <span class="med">Med</span><span class="nest">Nest</span>
+        </h1>
+              
+        
+
+        <p style="color: black;"></p>Real-time patient health monitoring and telemedicine for seamless, remote healthcare, <br>ensuring timely interventions and better connectivity between patients and doctors.
+        </p>
+        <a href="profile.html" class="hero-btn">Visit your profile</a>
+      </div>
+    </section>
+    <!-- header section end -->
+    <!-- course section strt -->
+    <section class="Services">
+      <h1>What We Offer</h1>
+      <p style="color: #FFF8E3 ;"> Smart hydroponics with real-time monitoring and growth insights</p>
+      <div class="row">
+        <a href="Monitoring.html" class="course-link">
+          <div class="course-col">
+            <h3 style="color: black ;">Real-Time Health Monitoring</h3>
+            <p  style="font-size: 15px;">Real-time tracking of vitals <br>(BP, ECG, Temperature, Respiration, Fall Detection).</p>
+          </div>
+        </a>
+
+        <a href="Statistics.html" class="course-link">
+          <div class="course-col">
+            <h3 style="color: black ;">STATISTICS </h3>
+            <p style="font-size: 15px;">Interactive charts & trends based <br> on monitored health data.</p>
+          </div>
+        </a>
+
+        <a href="Appointments.html" class="course-link">
+          <div class="course-col">
+            <h3 style="color: black ;">APPOINTMENTS </h3>
+            <p style="font-size: 15px;">  Schedule doctor consultations & <br>manage upcoming visits.</p>
+          </div>
+        </a>
+
+        <a href="Chatbot.html" class="course-link">
+          <div class="course-col">
+            <h3 style="color: black ;">CHATBOT</h3>
+            <p style="font-size: 15px;">IAI-powered assistant for health queries, <br>reports & quick support.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- course section end -->
+    <!-- campus section strt -->
+    <section class="campus">
+      <h1>What makes us SPECIAL</h1>
+      <p  style="font-size: 19px; color: #FFF8E3;"> Explore our innovative Telemedicine feautre <br>Integrated with Iot to ease your life</li></ul></p>
+      <div class="row">
+        <div class="campus-col">
+          <img src="images/SOS.jpg" alt="" />
+          <div class="layer">
+            <h3>SOS/Emergency</h3>
+          </div>
+        </div>
+        <div class="campus-col">
+          <img src="images/RPM.jpg" alt="" />
+          <div class="layer">
+            <h3>RPM Devices</h3>
+          </div>
+        </div>
+        <div class="campus-col">
+          <img src="images/Chatbot.jpg" alt="" />
+          <div class="layer">
+            <h3>CHATBOT</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- campus section end -->
+
+    <!-- facilities section end -->
+    <!-- testimonial section strt -->
+    <section class="testimonials">
+      <h1>What Our Customer Says</h1>
+      <p style="font-size: 16px;"></p> "We at MedNest give a lot of importance of what our customer feels about us , <br>constant changes is the key in our relations with coustomers :P</p>
+      <div class="row">
+        <div class="testimonial-col">
+          <img src="images/user1.jpg" alt="" />
+          <div>
+            <p>
+              "MedNest has completely transformed the way I manage my health! <br>The real-time monitoring feature helps me track my health effortlessly, <br>and the detailed statistics give me insights into my health records. <br>The interface is clean and easy to navigate, <br>making telemedicine simpler than ever. Looking forward to more updates!"
+            </p>
+            <h3>Aditi Sisodia - <br> School Teacher </h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+        </div>
+        <div class="testimonial-col">
+          <img src="images/user2.jpg" alt="" />
+          <div>
+            <p>"MedNest is a game-changer! <br> The real-time monitoring and alerts keep me updated on my close one's health, even when I'm away. <br> <br></p>
+            <h3>Ayush Khapra - <br> Businessman </h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial section end -->
+    <!-- Call to Action section strt -->
+    
+    <!-- Call to Action section end -->
+    <!-- footer strt -->
+    <section class="footer">
+      <h4><strong>Team</strong>  </h4>
+      <p>
+        Made by the team of MedNest 
+        <br>
+        Sejal Mishra 
+        <br>
+        Akshat Singh
+      </p>
+      <div class="icons">
+        <i style="color: #1877F2;" class="fa fa-facebook"></i>
+        <i  style="color: #1DA1F2;" class="fa fa-twitter"></i>
+        <i  style="color: #C13584;" class="fa fa-instagram"></i>
+        <i  style="color: #0077B5;" class="fa fa-linkedin"></i>
+      </div>
+    </section>
+    <!-- footer end -->
+    <!-- Javascript for toggle menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

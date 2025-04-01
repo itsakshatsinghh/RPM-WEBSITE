@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointments</title>
+    <style>
+      /* Background & Header */
+      .header {
+        min-height: 100vh;
+        width: 100%;
+        background: linear-gradient(
+          to bottom,
+          #d8eff3 30%,
+          #d8eff3 30%,
+          #1b7ca5 70%,
+          #1b7ca5 65%
+        );
+        background-size: cover;
+        background-position: center;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #1b7ca5 35%, #0f3f74 100%);
+        color: #10194e;
+      }
+
+      /* Navbar */
+      nav {
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav img {
+        width: 90px;
+      }
+
+      .nav-links {
+        flex: 1;
+        text-align: right;
+      }
+
+      .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+      }
+
+      .nav-links ul li::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: #cba7da;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+      }
+
+      .nav-links ul li:hover::after {
+        width: 100%;
+      }
+
+      .nav-links ul li a {
+        font-size: 13px;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      /* Appointment Section */
+      .container {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .section-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .doctor-card {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        border-radius: 8px;
+        margin: 10px 0;
+      }
+
+      .doctor-card h3 {
+        margin: 0;
+        color: rgb(0, 0, 0);
+      }
+
+      .doctor-card p {
+        margin: 5px 0;
+      }
+
+      .book-btn {
+        background: #e7c8f6;
+        color: #7c7575;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .book-btn:hover {
+        background: #a78bb9;
+      }
+
+      /* Calendly Widget Styling */
+      .calendly-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .calendly-inline-widget {
+      width: 320px;  /* Made it narrower */
+      height: 350px; /* Shortened height */
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+
+  .section-title {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .section-title::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: rgb(38, 23, 153);
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  .section-title:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" alt="MedNest Logo" /></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="monitoring.html">MONITORING</a></li>
+            <li><a href="statistics.html">STATISTICS</a></li>
+            <li><a href="appointments.html">APPOINTMENTS</a></li>
+            <li><a href="chatbot.html">CHATBOT</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <h2  style="color: black;" class="section-title"></h2></h2>
+
+          <h3 class="section-title"> <br>Available Doctors</h3>
+        <div class="doctor-card">
+          <h3>Dr. Jatin Tiwari</h3>
+          <p>Cardiologist</p>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+
+        <div class="doctor-card">
+          <h3>Dr. Sachin Pathak </h3>
+          <p>Neurologist</p>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+
+        <div class="doctor-card">
+          <h3>Dr. Shyam Narayan</h3>
+          <p>Pediatrician</p>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+
+        <!-- Calendly Booking Section -->
+        <h3  style="color: rgb(25, 0, 255);" class="section-title">Schedule a Telemedicine Session</h3>
+        <div class="calendly-container">
+          <div class="calendly-inline-widget" data-url="https://calendly.com/ranaakshat45/telemedicine-session?hide_gdpr_banner=1"></div>
+        </div>
+
+        <h3 style="color: rgb(45, 26, 188);"class="section-title">Your Appointments</h3>
+<div class="calendly-container">
+  <iframe 
+    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&showPrint=0&title=Booked%20Appointments&src=cmFuYWFrc2hhdDQ1QGdtYWlsLmNvbQ&src=Y2xhc3Nyb29tMTA3ODgwNzA2ODk2NDYxOTIxNDQzQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23202124&color=%230B8043" 
+    style="border:solid 1px #777; width:320px; height:350px; border-radius:10px; box-shadow:0px 4px 8px rgba(0, 0, 0, 0.2);" 
+    frameborder="0" 
+    scrolling="no">
+  </iframe>
+</div>
+
+
+        <h3  style="color: rgb(38, 23, 153);" class="section-title">Booking Confirmation</h3>
+        <p style="font-size: 18px;">
+          You'll receive a confirmation email and in-app notification after
+          booking an appointment.
+        </p>
+      </div>
+    </div>
+
+    <!-- Calendly Script -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </body>
+</html>

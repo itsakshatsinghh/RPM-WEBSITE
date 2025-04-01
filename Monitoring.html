@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring</title>
+    <style>
+        /* Background & Header */
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background: linear-gradient(
+                to bottom,
+                #d8eff3 30%,
+                #d8eff3 30%,
+                #1b7ca5 70%,
+                #1b7ca5 65%
+            );
+            background-size: cover;
+            background-position: center;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #1b7ca5 35%, #0f3f74 100%);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #10194e;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 90px;
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #cba7da;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        .nav-links ul li a {
+            font-size: 13px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        /* Page Layout */
+        .monitoring-container {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            height: 80vh;
+        }
+
+        /* Left Section - Human Body */
+        .left-section {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-section img {
+            width: 80%;
+            max-width: 350px;
+        }
+
+        /* Right Section - 7 Health Boxes */
+        .right-section {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .health-box {
+            width: 80%;
+            padding: 15px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Color-coded Status */
+        .green { background: #2a93d4  }
+        .yellow { background: #2a93d4  }
+        .red { background: #2a93d4  }
+
+        /* Glowing Effect */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.697); }
+            50% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.803); }
+            100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+        }
+
+        /* Health Summary Section */
+        .health-summary {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            border-radius: 10px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="MedNest Logo" /></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="monitoring.html">MONITORING</a></li>
+                    <li><a href="statistics.html">STATISTICS</a></li>
+                    <li><a href="appointments.html">APPOINTMENTS</a></li>
+                    <li><a href="chatbot.html">CHATBOT</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="monitoring-container">
+            <!-- Left Section - Human Body -->
+            <div class="left-section">
+              <div class="sketchfab-embed-wrapper">
+                <iframe title="Muscleman"
+                width="300px" height="640px" 
+                        frameborder="0"
+                        allowfullscreen
+                        mozallowfullscreen="true"
+                        webkitallowfullscreen="true"
+                        allow="autoplay; fullscreen; xr-spatial-tracking"
+                        src="https://sketchfab.com/models/c05beeaf2946402a9375da8f3cec1090/embed?autostart=1&autospin=0.5&transparent=1
+                        ">
+                </iframe>
+              </div>
+            </div>
+
+            <!-- Right Section - 7 Animated Health Boxes -->
+            <div class="right-section">
+                <div class="health-box green">Temperature: 98.6°F</div>
+                <div class="health-box green">SpO2: 97%</div>
+                <div class="health-box yellow">Heart Rate: 105 BPM</div>
+                <div class="health-box green">ECG: Normal</div>
+                <div class="health-box green">Blood Pressure: 116/72 mmHg</div>
+                <div class="health-box red">Fall Not Detected!</div>
+                <div class="health-box green">Respiration Rate: 16 breaths/min</div>
+            </div>
+        </div>
+
+        <!-- Health Summary Section -->
+        <div class="health-summary">
+            <h3>Health Summary</h3>
+            <p>Your vitals have been stable for the last hour.</p>
+        </div>
+    </div>
+
+</body>
+</html>

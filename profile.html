@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <style>
+      /* Background & Header */
+      .header {
+        min-height: 100vh;
+        width: 100%;
+        background: linear-gradient(
+          to bottom,
+          #d8eff3 30%,
+          #d8eff3 30%,
+          #1b7ca5 70%,
+          #1b7ca5 65%
+        );
+        background-size: cover;
+        background-position: center;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #1b7ca5 35%, #0f3f74 100%);
+        color: rgb(56, 0, 0);
+      }
+
+      /* Navbar */
+      nav {
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav img {
+        width: 90px;
+      }
+
+      .nav-links {
+        flex: 1;
+        text-align: right;
+      }
+
+      .nav-links ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+      }
+
+      .nav-links ul li::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: #cba7da;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+      }
+
+      .nav-links ul li:hover::after {
+        width: 100%;
+      }
+
+      .nav-links ul li a {
+        font-size: 13px;
+        text-decoration: none;
+        color: black;
+      }
+
+      /* Profile Section */
+      .profile-container {
+        width: 50%;
+        margin: 50px auto;
+        padding: 20px;
+        background: rgba(241, 241, 241, 0.327);
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .profile-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid rgba(0, 0, 0, 0.503);
+      }
+
+      .profile-info {
+        margin-top: 20px;
+        text-align: left;
+        padding: 10px 40px;
+      }
+
+      .profile-info p {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+
+      .label {
+        font-weight: bold;
+        color: #212121;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <!-- Navbar -->
+      <nav>
+        <a href="index.html"><img src="images/logo.png" alt="MedNest Logo" /></a>
+        
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="monitoring.html">MONITORING</a></li>
+            <li><a href="statistics.html">STATISTICS</a></li>
+            <li><a href="appointments.html">APPOINTMENTS</a></li>
+            <li><a href="chatbot.html">CHATBOT</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Profile Section -->
+      <div class="profile-container">
+        <img src="images\profile-placeholder.jpg" alt="Profile Image" class="profile-image" />
+        <div class="profile-info">
+          
+          <p><span class="label">Name:</span> Aditya Saxena</p>
+          <p><span class="label">Username:</span> AdiSaxena</p>
+          <p><span class="label">Phone Number:</span> +91 7318068695</p>
+          <p><span class="label">Email:</span> Aditya95@example.com</p>
+          <p><span class="label">Preferred Doctor:</span> Dr.Sachin Pathak</p>
+          <a href="index.html" class="hero-btn">Go to homepage</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
